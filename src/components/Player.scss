@@ -1,0 +1,136 @@
+.player-container {
+  padding: 0;
+  border-radius: 0;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; /* Center horizontally */
+  height: 50vh;
+
+  .player-content {
+    display: flex;
+    width: 80%;
+    flex-direction: column;
+    align-items: center; /* Center children horizontally */
+    gap: 3vh; /* 3vh gap between song info, thumbnail, and controls */
+  }
+
+  .song-info-container {
+    width: 75%;
+    text-align: left;
+    margin: 0; /* Remove margin to rely on gap */
+  }
+
+  .song-info {
+    h4 {
+      margin: 0;
+      font-size: 18px;
+    }
+
+    p {
+      margin: 0;
+      color: #b3b3b3;
+      font-size: 14px;
+    }
+  }
+
+  .thumbnail-container {
+    width: 75%;
+    margin: 0; /* Remove margin to rely on gap */
+
+    .album-art {
+      width: 100%;
+      height: auto;
+      max-height: 75vw;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+  }
+
+  .controls-container {
+    width: 75%;
+    margin: 0; /* Remove margin to rely on gap */
+    padding: 0; /* Remove padding */
+
+    .controls {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+
+      .icon-button {
+        width: 40px;
+        height: 40px;
+        background-color: #666;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: none;
+        cursor: pointer;
+
+        svg {
+          color: white;
+          font-size: 20px;
+          font-weight: bold;
+        }
+      }
+
+      .main-controls {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+      }
+
+      .control-button {
+        color: white;
+        font-size: 24px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 5px;
+        text-decoration: none;
+        line-height: 1;
+      }
+
+      .play-pause-button {
+        width: 40px;
+        height: 40px;
+        background-color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: black;
+        font-size: 20px;
+        line-height: 1;
+        border: none;
+        cursor: pointer;
+        text-decoration: none;
+      }
+    }
+
+    .progress-bar {
+      width: 100%;
+      height: 5px;
+      background: rgba(255, 255, 255, 0.2);
+      cursor: pointer;
+      position: relative;
+      margin-bottom: 10px;
+
+      .progress {
+        height: 100%;
+        background: #1db954;
+        transition: width 0.1s linear;
+      }
+    }
+  }
+}
+
+.album-art {
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  max-width: 100%;
+  height: auto;
+}

@@ -1,0 +1,64 @@
+body {
+  color: white;
+  transition: background 0.5s ease;
+}
+
+.app-container {
+  padding: 0;
+}
+
+.sidebar-col {
+  width: 15%;
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+
+.main-content {
+  width: 35%;
+  padding: 20px;
+
+  .menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    margin-bottom: 10px;
+
+    @media (max-width: 768px) {
+      display: block;
+    }
+  }
+
+  .song-list-container {
+    @media (max-width: 768px) {
+      display: none;
+
+      &.active {
+        display: block;
+      }
+    }
+  }
+}
+
+.player-col {
+  width: 50%;
+  height: 100vh; /* Ensure full height */
+  @media (max-width: 768px) {
+    width: 100%;
+    height: auto; /* Allow natural height on mobile */
+  }
+}
+
+.row {
+  display: flex;
+  width: 100%;
+  margin: 0;
+  height: 100vh; /* Full height for the row */
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    height: auto;
+  }
+}

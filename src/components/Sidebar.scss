@@ -1,0 +1,24 @@
+.sidebar {
+  padding: 20px;
+  height: 100vh;
+  color: white;
+
+  .logo {
+    margin-bottom: 20px;
+  }
+
+  .nav-link {
+    color: #b3b3b3;
+    padding: 10px 0;
+    font-size: 18px;
+
+    &.active {
+      color: white;
+      font-weight: bold;
+    }
+
+    &:hover {
+      color: white;
+    }
+  }
+}
